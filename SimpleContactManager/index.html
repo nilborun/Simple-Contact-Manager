@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="ngApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app/app.js"></script>
+<script src="bower_components/idbwrapper/idbstore.min.js"></script>
+<script src="app/controller/groupController.js"></script>
+
+   <div style="float: left" >
+      <div ng-controller="groupeAddController">
+          <fieldset>
+              <legend>Add New Group</legend>
+              <input type="text" size="20" ng-model="groupName"/>
+              <button ng-click="addGroup()"> Add</button>
+              <div ng-repeat="item in groups">
+                  <p>
+                      {{item.groupName}}
+                  </p>
+              </div>
+
+          </fieldset>
+      </div>
+
+   </div>
+</body>
+</html>
